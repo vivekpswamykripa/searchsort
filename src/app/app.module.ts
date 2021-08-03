@@ -1,24 +1,17 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { AppComponent } from "./app.component";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import {HttpClientModule} from '@angular/common/http';
-import { StudentdetailsComponent } from "./studentdetails/studentdetails.component";
-import { SearchfilterPipe } from './searchfilter.pipe';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
+import { AppComponent } from './app.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
-  declarations:[
-    AppComponent,
-    StudentdetailsComponent,
-    SearchfilterPipe
-  ],
-  imports:[
+  declarations: [AppComponent],
+  imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgGridModule.withComponents([])
   ],
-  providers:[],
-  bootstrap:[AppComponent]
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule{}
+export class AppModule {}
